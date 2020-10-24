@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function User({user}){
     return(
         <>
-            <Card as={Link} to={`/user/${user.id}`}>
+            <Card as={Link} to={process.env.PUBLIC_URL+`/user/${user.id}`}>
                 <Card.Img src={user.avatar} variant="top" />
                 <Card.Body>
                     <Card.Title>{user.first_name} {user.last_name}</Card.Title>

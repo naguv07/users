@@ -7,8 +7,8 @@ import Users from '../users/UserList/Users';
 function App() {
   return (
     <Container className="content-body">
-      <Route exact path={"/"} component={Users}/>
-      <Route exact path={"/user/:userid"} component={UserDetailed}/>
+      <Route exact path={process.env.PUBLIC_URL+"/"} component={Users}/>
+      <Route exact path={process.env.PUBLIC_URL+"/user/:userid"} component={UserDetailed}/>
     </Container>
   );
 }
